@@ -1,11 +1,11 @@
-from .db import db
+from mongoengine import Document, EmailField, StringField
 from flask_bcrypt import generate_password_hash, check_password_hash
 import string, random
 
-class User(db.Document):
-	email = db.EmailField(required=True, unique=True)
-	password = db.StringField(required=True, min_length=6)
-	salt = db.StringField()
+class User(Document):
+	email = EmailField(required=True, unique=True)
+	password = StringField(required=True, min_length=6)
+	salt = StringField()
 	
 	def hash_password(self):
 		chars = string.ascii_letters + string.punctuation

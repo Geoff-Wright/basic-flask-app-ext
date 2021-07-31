@@ -1,6 +1,4 @@
-from flask_mongoengine import MongoEngine
-
-db = MongoEngine()
+from mongoengine import connect
 
 def initialize_db(app):
-	db.init_app(app)
+	connect(host=app.config['MONGODB_SETTINGS'])

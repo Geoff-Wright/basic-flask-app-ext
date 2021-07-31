@@ -8,7 +8,6 @@ Flask==2.0.1
 Flask-Bcrypt==0.7.1
 Flask-Cors==3.0.10
 Flask-JWT-Extended==4.2.3
-flask-mongoengine==1.0.0
 Flask-RESTful==0.3.9
 flask-restful-swagger-2==0.35
 Flask-WTF==0.15.1
