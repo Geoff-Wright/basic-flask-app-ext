@@ -1,7 +1,7 @@
 from flask import request
 from flask_restful_swagger_2 import Resource
 from flask_jwt_extended import create_access_token, create_refresh_token, jwt_required, get_jwt_identity
-from database.models import User
+from api.database.models import User
 import datetime
 
 class SignupApi(Resource):
